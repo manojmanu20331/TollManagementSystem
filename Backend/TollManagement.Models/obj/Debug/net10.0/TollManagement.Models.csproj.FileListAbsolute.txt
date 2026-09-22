@@ -1,0 +1,11 @@
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Models\bin\Debug\net10.0\TollManagement.Models.deps.json
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Models\bin\Debug\net10.0\TollManagement.Models.dll
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Models\bin\Debug\net10.0\TollManagement.Models.pdb
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Models\obj\Debug\net10.0\TollManagement.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Models\obj\Debug\net10.0\TollManagement.Models.AssemblyInfoInputs.cache
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Models\obj\Debug\net10.0\TollManagement.Models.AssemblyInfo.cs
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Models\obj\Debug\net10.0\TollManagement.Models.csproj.CoreCompileInputs.cache
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Models\obj\Debug\net10.0\TollManagement.Models.dll
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Models\obj\Debug\net10.0\refint\TollManagement.Models.dll
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Models\obj\Debug\net10.0\TollManagement.Models.pdb
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Models\obj\Debug\net10.0\ref\TollManagement.Models.dll

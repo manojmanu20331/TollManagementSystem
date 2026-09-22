@@ -1,0 +1,17 @@
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Business\bin\Debug\net10.0\TollManagement.Business.deps.json
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Business\bin\Debug\net10.0\TollManagement.Business.dll
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Business\bin\Debug\net10.0\TollManagement.Business.pdb
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Business\bin\Debug\net10.0\TollManagement.Data.dll
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Business\bin\Debug\net10.0\TollManagement.Models.dll
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Business\bin\Debug\net10.0\TollManagement.Data.pdb
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Business\bin\Debug\net10.0\TollManagement.Models.pdb
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Business\obj\Debug\net10.0\TollManagement.Business.csproj.AssemblyReference.cache
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Business\obj\Debug\net10.0\TollManagement.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Business\obj\Debug\net10.0\TollManagement.Business.AssemblyInfoInputs.cache
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Business\obj\Debug\net10.0\TollManagement.Business.AssemblyInfo.cs
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Business\obj\Debug\net10.0\TollManagement.Business.csproj.CoreCompileInputs.cache
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Business\obj\Debug\net10.0\TollMana.AC9FAE88.Up2Date
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Business\obj\Debug\net10.0\TollManagement.Business.dll
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Business\obj\Debug\net10.0\refint\TollManagement.Business.dll
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Business\obj\Debug\net10.0\TollManagement.Business.pdb
+C:\Users\sridivya\Downloads\operators\TollManagementSystem\Backend\TollManagement.Business\obj\Debug\net10.0\ref\TollManagement.Business.dll

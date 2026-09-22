@@ -1,0 +1,36 @@
+@TollManagementApiHostAddress = http://localhost:5233
+
+GET {{TollManagementApiHostAddress}}/api/vehicle
+Accept: application/json
+
+###
+
+GET {{TollManagementApiHostAddress}}/api/vehicle/1
+Accept: application/json
+
+###
+
+POST {{TollManagementApiHostAddress}}/api/vehicle
+Content-Type: application/json
+
+{
+  "vehicleNumber": "TS09AB1234",
+  "ownerName": "Manoj Kumar",
+  "vehicleType": "Car"
+}
+
+###
+
+PUT {{TollManagementApiHostAddress}}/api/vehicle/1
+Content-Type: application/json
+
+{
+  "vehicleNumber": "KA01AB1234",
+  "ownerName": "Updated Owner",
+  "vehicleType": "Car",
+  "isActive": true
+}
+
+###
+
+DELETE {{TollManagementApiHostAddress}}/api/vehicle/1

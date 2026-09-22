@@ -1,0 +1,6 @@
+@TollManagementApiHostAddress = http://localhost:5233
+
+GET {{TollManagementApiHostAddress}}/weatherforecast/
+Accept: application/json
+
+###

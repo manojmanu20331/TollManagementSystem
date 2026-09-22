@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b2d">
+  <title>Tollwise | Operations Console</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><span></span><span></span><span></span></div>
+        <div><strong>Tollwise</strong><small>operations console</small></div>
+      </div>
+
+      <div class="workspace-switcher">
+        <span class="workspace-dot"></span>
+        <div><small>Workspace</small><strong>South corridor</strong></div>
+        <button class="icon-button muted" aria-label="Switch workspace">⌄</button>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <p class="nav-label">Overview</p>
+        <button class="nav-item active" data-view="dashboard"><span class="nav-icon">◫</span>Dashboard</button>
+        <button class="nav-item" data-view="vehicles"><span class="nav-icon">▣</span>Vehicles <span class="nav-count">248</span></button>
+        <p class="nav-label">Network</p>
+        <button class="nav-item" data-view="plazas"><span class="nav-icon">⌖</span>Toll plazas</button>
+        <button class="nav-item" data-view="rates"><span class="nav-icon">◈</span>Toll rates</button>
+        <button class="nav-item" data-view="transactions"><span class="nav-icon">⇄</span>Transactions</button>
+        <p class="nav-label">System</p>
+        <button class="nav-item" data-view="settings"><span class="nav-icon">⚙</span>Settings</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="support-card"><span class="support-orbit"></span><strong>Need a hand?</strong><p>Operations support is online.</p><button>Open support chat <span>↗</span></button></div>
+        <div class="profile-row"><div class="avatar">MK</div><div><strong>Manoj Kumar</strong><small>Administrator</small></div><button class="icon-button muted" aria-label="Profile menu">•••</button></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="menu-toggle icon-button" id="menuToggle" aria-label="Toggle navigation">☰</button>
+        <div class="breadcrumbs"><span>Workspace</span><b>/</b><strong id="breadcrumbCurrent">Dashboard</strong></div>
+        <div class="top-actions">
+          <div class="connection-pill" id="connectionStatus"><span class="status-dot"></span><span>API connected</span></div>
+          <button class="icon-button notification-button" aria-label="Notifications"><span class="notification-dot"></span>♢</button>
+          <button class="top-avatar">MK</button>
+        </div>
+      </header>
+
+      <div class="page-wrap">
+        <section class="view active" id="view-dashboard">
+          <div class="page-heading">
+            <div><p class="eyebrow">Saturday, 05 September 2026</p><h1>Good morning, Manoj<span class="heading-period">.</span></h1><p class="heading-copy">Here is what is moving across your toll network today.</p></div>
+            <div class="heading-actions"><button class="button ghost" id="refreshDashboard"><span>↻</span> Refresh</button><button class="button primary" data-view-target="vehicles"><span>+</span> Add vehicle</button></div>
+          </div>
+
+          <div class="metrics-grid">
+            <article class="metric-card accent-teal"><div class="metric-top"><span class="metric-label">Today's collection</span><span class="metric-icon">₹</span></div><strong class="metric-value">₹ 84,260</strong><div class="metric-foot"><span class="trend positive">↗ 12.8%</span><span>vs yesterday</span></div></article>
+            <article class="metric-card"><div class="metric-top"><span class="metric-label">Vehicles processed</span><span class="metric-icon">▣</span></div><strong class="metric-value">1,284</strong><div class="metric-foot"><span class="trend positive">↗ 8.4%</span><span>vs yesterday</span></div></article>
+            <article class="metric-card"><div class="metric-top"><span class="metric-label">Active toll plazas</span><span class="metric-icon">⌖</span></div><strong class="metric-value">08 <small>/ 09</small></strong><div class="metric-foot"><span class="trend warning">1 offline</span><span>maintenance mode</span></div></article>
+            <article class="metric-card"><div class="metric-top"><span class="metric-label">Average wait time</span><span class="metric-icon">◷</span></div><strong class="metric-value">04:32 <small>min</small></strong><div class="metric-foot"><span class="trend positive">↘ 06.2%</span><span>vs last week</span></div></article>
+          </div>
+
+          <div class="dashboard-grid">
+            <article class="panel collection-panel"><div class="panel-heading"><div><h2>Collection overview</h2><p>Revenue performance across the last 7 days</p></div><select class="select-control" id="chartRange"><option>Last 7 days</option><option>Last 30 days</option></select></div><div class="chart-wrap"><div class="chart-y-axis"><span>₹ 100k</span><span>₹ 75k</span><span>₹ 50k</span><span>₹ 25k</span><span>₹ 0</span></div><div class="bar-chart" id="collectionChart"><div class="grid-line line-1"></div><div class="grid-line line-2"></div><div class="grid-line line-3"></div><div class="grid-line line-4"></div><div class="bar-group"><div class="bar" style="height:58%"><span>58k</span></div><small>Mon</small></div><div class="bar-group"><div class="bar" style="height:73%"><span>73k</span></div><small>Tue</small></div><div class="bar-group"><div class="bar" style="height:66%"><span>66k</span></div><small>Wed</small></div><div class="bar-group"><div class="bar" style="height:82%"><span>82k</span></div><small>Thu</small></div><div class="bar-group"><div class="bar" style="height:75%"><span>75k</span></div><small>Fri</small></div><div class="bar-group today"><div class="bar" style="height:91%"><span>84k</span></div><small>Sat</small></div><div class="bar-group muted-bar"><div class="bar" style="height:42%"><span>--</span></div><small>Sun</small></div></div></div><div class="chart-legend"><span><i class="legend-dot teal"></i>Collection</span><span><i class="legend-dot pale"></i>Projected</span></div></article>
+            <article class="panel status-panel"><div class="panel-heading"><div><h2>Plaza status</h2><p>Live network health</p></div><button class="text-button" data-view-target="plazas">View all <span>→</span></button></div><div class="plaza-list"><div class="plaza-row"><div class="plaza-symbol healthy">✓</div><div class="plaza-info"><strong>Shamshabad East</strong><small>Lane 01 - 04 · Hyderabad</small></div><span class="status-label healthy-text">Operational</span></div><div class="plaza-row"><div class="plaza-symbol healthy">✓</div><div class="plaza-info"><strong>Medchal Gateway</strong><small>Lane 01 - 06 · Hyderabad</small></div><span class="status-label healthy-text">Operational</span></div><div class="plaza-row"><div class="plaza-symbol warning">!</div><div class="plaza-info"><strong>Gachibowli Link</strong><small>Lane 01 - 03 · Hyderabad</small></div><span class="status-label warning-text">Maintenance</span></div><div class="plaza-row"><div class="plaza-symbol healthy">✓</div><div class="plaza-info"><strong>Patancheru North</strong><small>Lane 01 - 05 · Sangareddy</small></div><span class="status-label healthy-text">Operational</span></div></div><div class="status-summary"><div><strong>94.7%</strong><small>Network uptime</small></div><div><strong>28 / 30</strong><small>Active lanes</small></div></div></article>
+          </div>
+
+          <div class="dashboard-grid lower-grid"><article class="panel activity-panel"><div class="panel-heading"><div><h2>Recent transactions</h2><p>Latest activity from the network</p></div><button class="text-button" data-view-target="transactions">See activity <span>→</span></button></div><div class="table-scroll"><table class="data-table"><thead><tr><th>Vehicle</th><th>Plaza</th><th>Time</th><th>Amount</th><th>Status</th></tr></thead><tbody><tr><td><strong>TS09AB1234</strong><small>Car · Manoj Kumar</small></td><td>Shamshabad East</td><td>09:42 AM</td><td><strong>₹ 85</strong></td><td><span class="badge success">Completed</span></td></tr><tr><td><strong>KA01MN7788</strong><small>SUV · Kavya Rao</small></td><td>Medchal Gateway</td><td>09:38 AM</td><td><strong>₹ 120</strong></td><td><span class="badge success">Completed</span></td></tr><tr><td><strong>AP28CQ0912</strong><small>Truck · R. Prasad</small></td><td>Gachibowli Link</td><td>09:34 AM</td><td><strong>₹ 260</strong></td><td><span class="badge pending">Pending</span></td></tr></tbody></table></div></article><article class="panel lane-panel"><div class="panel-heading"><div><h2>Lane throughput</h2><p>Vehicles per hour</p></div><span class="live-indicator"><i></i>Live</span></div><div class="throughput-value"><strong>184</strong><span>vehicles / hour</span></div><div class="sparkline"><span style="height:25%"></span><span style="height:44%"></span><span style="height:36%"></span><span style="height:64%"></span><span style="height:50%"></span><span style="height:72%"></span><span style="height:60%"></span><span style="height:88%"></span><span style="height:75%"></span><span style="height:94%"></span><span style="height:81%"></span><span style="height:100%"></span></div><div class="lane-foot"><span>06:00 AM</span><span>Now</span></div></article></div>
+        </section>
+
+        <section class="view" id="view-vehicles"><div class="page-heading compact"><div><p class="eyebrow">Fleet registry</p><h1>Vehicles</h1><p class="heading-copy">Register and manage every vehicle using your toll network.</p></div><button class="button primary" id="openVehicleModal"><span>+</span> Add vehicle</button></div><div class="toolbar"><div class="search-field"><span>⌕</span><input id="vehicleSearch" type="search" placeholder="Search registration, owner or type..."></div><div class="toolbar-actions"><select class="select-control"><option>All vehicle types</option><option>Car</option><option>SUV</option><option>Truck</option></select><button class="button ghost"><span>⇩</span> Export</button></div></div><div class="panel table-panel"><div class="table-meta"><span><strong id="vehicleCount">6</strong> registered vehicles</span><span class="sync-label" id="vehicleSync">Showing demo data</span></div><div class="table-scroll"><table class="data-table vehicle-table"><thead><tr><th>Registration</th><th>Owner</th><th>Type</th><th>Added on</th><th>Status</th><th></th></tr></thead><tbody id="vehicleRows"></tbody></table></div></div></section>
+
+        <section class="view" id="view-plazas"><div class="page-heading compact"><div><p class="eyebrow">Network management</p><h1>Toll plazas</h1><p class="heading-copy">Monitor plaza health, lane capacity, and local operations.</p></div><button class="button primary"><span>+</span> Add plaza</button></div><div class="card-grid three-col"><article class="network-card online"><div class="network-card-top"><span class="plaza-symbol healthy">✓</span><span class="badge success">Operational</span></div><h3>Shamshabad East</h3><p>Airport Road, Hyderabad</p><div class="network-stats"><span><strong>04</strong> lanes</span><span><strong>98.4%</strong> uptime</span></div><button class="card-link">Manage plaza <span>→</span></button></article><article class="network-card online"><div class="network-card-top"><span class="plaza-symbol healthy">✓</span><span class="badge success">Operational</span></div><h3>Medchal Gateway</h3><p>NH 44, Medchal</p><div class="network-stats"><span><strong>06</strong> lanes</span><span><strong>99.1%</strong> uptime</span></div><button class="card-link">Manage plaza <span>→</span></button></article><article class="network-card maintenance"><div class="network-card-top"><span class="plaza-symbol warning">!</span><span class="badge pending">Maintenance</span></div><h3>Gachibowli Link</h3><p>ORR Exit 1, Hyderabad</p><div class="network-stats"><span><strong>03</strong> lanes</span><span><strong>87.2%</strong> uptime</span></div><button class="card-link">View maintenance <span>→</span></button></article></div></section>
+
+        <section class="view" id="view-rates"><div class="page-heading compact"><div><p class="eyebrow">Pricing controls</p><h1>Toll rates</h1><p class="heading-copy">Keep pricing consistent across vehicle classes and plazas.</p></div><button class="button primary"><span>+</span> Add rate</button></div><div class="panel table-panel"><div class="table-meta"><span><strong>18</strong> active rate rules</span><span class="sync-label">Last updated 2 hours ago</span></div><div class="table-scroll"><table class="data-table"><thead><tr><th>Plaza</th><th>Vehicle class</th><th>One-way</th><th>Return</th><th>Effective from</th><th>Status</th></tr></thead><tbody><tr><td><strong>Shamshabad East</strong></td><td>Car / Jeep</td><td><strong>₹ 85</strong></td><td>₹ 125</td><td>01 Sep 2026</td><td><span class="badge success">Active</span></td></tr><tr><td><strong>Shamshabad East</strong></td><td>Truck / Bus</td><td><strong>₹ 260</strong></td><td>₹ 390</td><td>01 Sep 2026</td><td><span class="badge success">Active</span></td></tr><tr><td><strong>Medchal Gateway</strong></td><td>Car / Jeep</td><td><strong>₹ 120</strong></td><td>₹ 180</td><td>15 Aug 2026</td><td><span class="badge success">Active</span></td></tr></tbody></table></div></div></section>
+
+        <section class="view" id="view-transactions"><div class="page-heading compact"><div><p class="eyebrow">Financial activity</p><h1>Transactions</h1><p class="heading-copy">Review payments, settlements, and toll collection events.</p></div><button class="button ghost"><span>⇩</span> Export report</button></div><div class="metrics-grid compact-metrics"><article class="metric-card"><span class="metric-label">Collected today</span><strong class="metric-value">₹ 84,260</strong><span class="trend positive">↗ 12.8% from yesterday</span></article><article class="metric-card"><span class="metric-label">Successful payments</span><strong class="metric-value">1,241</strong><span class="trend positive">96.7% success rate</span></article><article class="metric-card"><span class="metric-label">Needs review</span><strong class="metric-value">07</strong><span class="trend warning">Requires attention</span></article></div><div class="panel table-panel"><div class="toolbar inside-toolbar"><div class="search-field"><span>⌕</span><input type="search" placeholder="Search transaction or vehicle..."></div><select class="select-control"><option>All statuses</option><option>Completed</option><option>Pending</option></select></div><div class="table-scroll"><table class="data-table"><thead><tr><th>Transaction ID</th><th>Vehicle</th><th>Plaza</th><th>Date & time</th><th>Amount</th><th>Status</th></tr></thead><tbody><tr><td><strong>#TXN-20481</strong></td><td>TS09AB1234</td><td>Shamshabad East</td><td>05 Sep · 09:42 AM</td><td><strong>₹ 85</strong></td><td><span class="badge success">Completed</span></td></tr><tr><td><strong>#TXN-20480</strong></td><td>KA01MN7788</td><td>Medchal Gateway</td><td>05 Sep · 09:38 AM</td><td><strong>₹ 120</strong></td><td><span class="badge success">Completed</span></td></tr><tr><td><strong>#TXN-20479</strong></td><td>AP28CQ0912</td><td>Gachibowli Link</td><td>05 Sep · 09:34 AM</td><td><strong>₹ 260</strong></td><td><span class="badge pending">Pending</span></td></tr></tbody></table></div></div></section>
+
+        <section class="view" id="view-settings"><div class="page-heading compact"><div><p class="eyebrow">Workspace preferences</p><h1>Settings</h1><p class="heading-copy">Configure how Tollwise works for your operations team.</p></div></div><div class="settings-layout"><nav class="settings-nav"><button class="settings-tab active">General</button><button class="settings-tab">Notifications</button><button class="settings-tab">Team access</button><button class="settings-tab">API connection</button></nav><div class="panel settings-panel"><h2>General preferences</h2><p class="panel-subtitle">These preferences apply to the South corridor workspace.</p><label class="form-label">Workspace name<input class="text-input" value="South corridor"></label><label class="form-label">Default currency<select class="text-input"><option>Indian Rupee (₹)</option></select></label><div class="setting-toggle"><div><strong>Live operational alerts</strong><p>Receive an alert when a plaza goes offline or enters maintenance.</p></div><button class="toggle on" aria-label="Toggle live alerts"><span></span></button></div><button class="button primary">Save changes</button></div></div></section>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="vehicleModal" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-heading"><div><p class="eyebrow">Fleet registry</p><h2 id="modalTitle">Add vehicle</h2></div><button class="icon-button close-modal" id="closeVehicleModal" aria-label="Close">×</button></div><form id="vehicleForm"><label class="form-label">Registration number<input class="text-input" name="vehicleNumber" placeholder="e.g. TS09AB1234" required></label><label class="form-label">Owner name<input class="text-input" name="ownerName" placeholder="Full name" required></label><label class="form-label">Vehicle type<select class="text-input" name="vehicleType" required><option value="">Select vehicle type</option><option>Car</option><option>SUV</option><option>Truck</option><option>Bus</option><option>Other</option></select></label><div class="form-actions"><button type="button" class="button ghost" id="cancelVehicle">Cancel</button><button type="submit" class="button primary" id="saveVehicle">Save vehicle</button></div></form></div></div>
+  <div class="toast" id="toast"><span class="toast-icon">✓</span><span id="toastMessage">Saved successfully</span></div>
+  <script src="../js/app.js"></script>
+</body>
+</html>
