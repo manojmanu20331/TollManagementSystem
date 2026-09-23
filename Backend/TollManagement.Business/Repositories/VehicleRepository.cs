@@ -41,7 +41,6 @@ namespace TollManagement.Data.Repositories
                     command.Parameters.AddWithValue(
                         "@VehicleNumber",
                         vehicle.VehicleNumber);
-
                     command.Parameters.AddWithValue(
                         "@OwnerName",
                         vehicle.OwnerName);
